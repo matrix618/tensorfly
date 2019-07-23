@@ -1,3 +1,3 @@
 # tensorfly
 
-study http://www.tensorfly.cn note
+study http://www.tensorfly.cn note.
