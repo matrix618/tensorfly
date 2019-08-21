@@ -19,7 +19,7 @@ train_step=tf.train.GradientDescentOptimizer(0.01).minimize(cross_)
 
 init = tf.global_variables_initializer()
 
-tf.summary.histogram('y',y);
+##tf.summary.histogram('y',y);
 tf.summary.scalar('loss',cross_)
 merged_summary_op = tf.summary.merge_all()
 
@@ -29,7 +29,7 @@ with tf.Session() as sess:
 
     summary_writer = tf.summary.FileWriter('tmp/mnist_logs', sess.graph)
 
-    for i in range(1000):
+    for i in range(10000):
       batch_xs, batch_ys = mnist.train.next_batch(100)
       sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
