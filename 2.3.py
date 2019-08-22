@@ -34,6 +34,9 @@ with tf.Session() as sess:
           print(ys)
 
 
+    tf.train.Saver().save(sess,'saver/mnist.ckpt')
+
+
 
           
                               
