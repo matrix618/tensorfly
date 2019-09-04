@@ -9,7 +9,7 @@ def download():
     # tf.app.flags.FLAGS是tensorflow的一个内部全局变量存储器
     FLAGS = tf.app.flags.FLAGS
     # 为了方便，我们将这个路径改为当前位置
-    FLAGS.data_dir = './cifar10_data'
+    FLAGS.data_dir = './tmp/cifar10_data'
     # 如果不存在数据文件则下载，并且解压
     cifar10.maybe_download_and_extract()
  
@@ -83,7 +83,7 @@ if __name__ == '__main__':
         os.mkdir(image_save_path)
  
     #获取图片数据
-    key, value = get_image('./cifar10_data/cifar-10-batches-bin/')
+    key, value = get_image('./tmp/cifar10_data/cifar-10-batches-bin/')
 
 
  
